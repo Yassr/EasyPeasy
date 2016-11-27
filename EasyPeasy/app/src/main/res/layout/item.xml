@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6fff2">
+
+    <Button
+        android:text="Add Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addPhoto"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addFood"
+        android:layout_above="@+id/addPhoto"
+        android:layout_centerHorizontal="true"
+        android:onClick="addfoodClick" />
+
+    <TextView
+        android:text="Gluten Free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/Gtext"
+        android:textSize="20sp"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/ItemName"
+        android:layout_toLeftOf="@+id/addPhoto"
+        android:layout_toStartOf="@+id/addPhoto"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="Lactose Free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ltext"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/Gtext"
+        android:layout_alignLeft="@+id/Ntext"
+        android:layout_alignStart="@+id/Ntext"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Description"
+        android:ems="10"
+        android:id="@+id/Dtext"
+        android:singleLine="false"
+        android:layout_above="@+id/addFood"
+        android:layout_alignRight="@+id/addFood"
+        android:layout_alignEnd="@+id/addFood"
+        android:layout_marginBottom="44dp"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="normal|bold" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Gtext"
+        android:layout_alignLeft="@+id/addFood"
+        android:layout_alignStart="@+id/addFood"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:id="@+id/Gbox"
+        android:layout_alignTop="@+id/Gtext" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Lbox"
+        android:layout_alignTop="@+id/Ltext"
+        android:layout_alignLeft="@+id/Gbox"
+        android:layout_alignStart="@+id/Gbox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Nbox"
+        android:layout_alignBottom="@+id/Ntext"
+        android:layout_alignLeft="@+id/Lbox"
+        android:layout_alignStart="@+id/Lbox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/ItemName"
+        android:textSize="26sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/Gtext"
+        android:layout_alignStart="@+id/Gtext" />
+
+    <TextView
+        android:text="Nuts Free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ntext"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/Lbox"
+        android:layout_alignLeft="@+id/Gtext"
+        android:layout_alignStart="@+id/Gtext"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Quantity"
+        android:ems="10"
+        android:id="@+id/Qtext"
+        android:singleLine="true"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="normal|bold"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/Ntext"
+        android:layout_alignStart="@+id/Ntext" />
+
+</RelativeLayout>

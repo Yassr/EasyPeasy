@@ -1,3 +1,155 @@
 <resources>
     <string name="app_name">EasyPeasy</string>
+    <string name="title_activity_grocery_maps">Map</string>
+    <string name="title_activity_food_item">FoodItem</string>
+    <string name="row1">List Name:</string>
+    <string name="row2">List Desc:</string>
+    <string name="row3">Complete Status:</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="Vegetables">
+        <item>Asparagus</item>
+        <item>Broccoli</item>
+        <item>Carrots</item>
+        <item>Cauliflower</item>
+        <item>Celery</item>
+        <item>Corn</item>
+        <item>Cucumbers</item>
+        <item>Lettuce</item>
+        <item>Mushrooms</item>
+        <item>Onions</item>
+        <item>Peppers</item>
+        <item>Potatoes</item>
+        <item>Spinach</item>
+        <item>Squash</item>
+        <item>Zucchini</item>
+        <item>Tomatoes</item>
+    </string-array>
+
+    <string-array name="Condiments">
+        <item>BBQ sauce</item>
+        <item>Gravy</item>
+        <item>Honey</item>
+        <item>Hot sauce</item>
+        <item>Jam</item>
+        <item>KetchupMustard</item>
+        <item>Mayonnaise</item>
+        <item>Pasta sauce</item>
+        <item>Relish</item>
+        <item>Salad dressing</item>
+        <item>Salsa</item>
+        <item>Soy sauce</item>
+        <item>Steak sauce</item>
+        <item>Syrup</item>
+        <item>Worcestershire sauce</item>
+    </string-array>
+
+    <string-array name="Dairy">
+        <item>Butter</item>
+        <item>Cottage cheese</item>
+        <item>Halfhalf</item>
+        <item>Milk</item>
+        <item>Sour cream</item>
+        <item>Whipped cream</item>
+        <item>Yogurt</item>
+    </string-array>
+
+    <string-array name="BakedGoods">
+        <item>Bagels</item>
+        <item>Rolls</item>
+        <item>Cake</item>
+        <item>Pastries</item>
+        <item>Fresh bread</item>
+        <item>Pita bread</item>
+        <item>Sliced bread</item>
+    </string-array>
+
+    <string-array name="Fresh_fruits">
+        <item>Apples</item>
+        <item>Avocados</item>
+        <item>Bananas</item>
+        <item>Berries</item>
+        <item>Cherries</item>
+        <item>Grapefruit</item>
+        <item>Grapes</item>
+        <item>Kiwis</item>
+        <item>Lemons_Limes</item>
+        <item>Melon</item>
+        <item>Nectarines</item>
+        <item>Oranges</item>
+        <item>Peaches</item>
+        <item>Pears</item>
+        <item>Plums</item>
+    </string-array>
+
+    <string-array name="Various_groceries">
+        <item>Bouillon cubes</item>
+        <item>Cereal</item>
+        <item>Coffee</item>
+        <item>Instant potatoes</item>
+        <item>Lemo_Lime juice</item>
+        <item>Mac_cheese</item>
+        <item>Olive oil</item>
+        <item>Packaged meals</item>
+        <item>Pancake</item>
+        <item>Pasta</item>
+        <item>Peanut butter</item>
+        <item>Pickles</item>
+        <item>Rice</item>
+        <item>Tea</item>
+        <item>Vegetable oil</item>
+        <item>Vinegar</item>
+    </string-array>
+
+    <string-array name="Meat">
+        <item>Sausage</item>
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Ground beef_Turkey</item>
+        <item>Hot dogs</item>
+        <item>Lunchmeat</item>
+        <item>Turkey</item>
+    </string-array>
+
+    <string-array name="Snacks">
+        <item>Candy</item>
+        <item>Cookies</item>
+        <item>Crackers</item>
+        <item>Dried fruit</item>
+        <item>Granola bar</item>
+        <item>Nuts</item>
+        <item>Oatmeal</item>
+        <item>Popcorn</item>
+        <item>Potato chips</item>
+        <item>Pretzels</item>
+    </string-array>
+
+    <string-array name="Cheese">
+        <item>Bleu cheese</item>
+        <item>Cheddar</item>
+        <item>Cottage cheese</item>
+        <item>Cream cheese</item>
+        <item>Feta</item>
+        <item>Goat cheese</item>
+        <item>Mozzarella</item>
+        <item>Parmesan</item>
+        <item>Provolone</item>
+        <item>Ricotta</item>
+        <item>Sandwich slices</item>
+        <item>Swiss</item>
+    </string-array>
+
+    <string-array name="Foods">
+        <item>Vegetables</item>
+        <item>Condiments</item>
+        <item>Dairy</item>
+        <item>Baked goods</item>
+        <item>Fresh fruits</item>
+        <item>Various groceries</item>
+        <item>Meat</item>
+        <item>Snacks</item>
+        <item>Cheese</item>
+    </string-array>
+
 </resources>

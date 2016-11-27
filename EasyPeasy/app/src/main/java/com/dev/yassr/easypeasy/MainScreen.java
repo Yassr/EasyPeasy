@@ -1,51 +1,66 @@
 package com.dev.yassr.easypeasy;
 
+import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-public class MainScreen extends AppCompatActivity {
-    String[] Country = new String[]{"Poland", "Uganda", "Tuvalu", "Morocco",
-            "Greece", "Luxembourg", "Norway", "Ireland", "Syria"};
+public class MainScreen extends ListActivity {
+
+    String[] columns = {"task_name", "task_desc"};
+    int[] to = {R.id.task_name, R.id.task_desc};
+    Cursor mCursor;
+    MyDBManager db;
+    Intent listItemIntent;
+    SimpleCursorAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
-        ArrayAdapter<String> cAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Country);
 
-        final ListView LView = (ListView) findViewById(R.id.list);
-        LView.setAdapter(cAdapter);
+        db = new MyDBManager(this);
 
+        try {
+            db.open();
+            mCursor = db.getAllTasks();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        //TOAST MESSAGE
+        mAdapter = new SimpleCursorAdapter(this, R.layout.row, mCursor, columns, to);
 
-        LView.setOnItemClickListener(
-
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Object o = LView.getItemAtPosition(position);
-                        Intent intent = new Intent(getApplicationContext(), ItemList.class);
-                        startActivity(intent);
-
-
-                    /*
-                        String selection = o.toString();
-                        Toast.makeText(getApplicationContext(), "Country Choosen : " + selection, Toast.LENGTH_LONG).show();
-                    */
-                    }
-
-                }
-        );
+        setListAdapter(mAdapter);
 
     }
 
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+
+//        String selectedFromList =(String) (l.getItemAtPosition(position));
+
+        Intent intent = new Intent(getApplicationContext(), ItemList.class);
+        intent.putExtra("listPosition", id);
+       // Toast.makeText(getApplicationContext(), "List id : " + id, Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+
+    }
+    public void mapbutton(View v) {
+        Intent intent = new Intent(getApplicationContext(), GroceryMaps.class);
+
+        startActivity(intent); }
+
+    public void newlistpage(View v){
+        Intent intent = new Intent(getApplicationContext(), ListInput.class);
+        startActivity(intent);
+    }
 
 }
+
+
